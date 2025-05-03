@@ -10,8 +10,11 @@ CREATE TABLE empresas (
     categoria VARCHAR(50),
     telefono VARCHAR(20),
     correo VARCHAR(100),
+    id_municipio INT,
     direccion VARCHAR(200),
-    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREING KEY (id_municipio) REFERENCES 
+    municipios(id_municipio)
 );
 
 -- Tabla: reseñas_empresa
@@ -24,3 +27,9 @@ CREATE TABLE reseñas_empresa (
     FOREIGN KEY (id_empresa) REFERENCES empresas(id_empresa)
 );
  
+--Tabla: Municipios
+CREATE TABLE municipios(
+id_municipio int AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR (100) NOT NULL,
+departamento VARCHAR(100) NOT NULL
+);
