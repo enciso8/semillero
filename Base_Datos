@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS rappi_ventas;
-USE rappi_ventas;
+CREATE DATABASE IF NOT EXISTS comercio;
+USE comercio;
 
 -- Tabla: Municipios
 CREATE TABLE municipios(
