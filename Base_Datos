@@ -22,7 +22,6 @@ CREATE TABLE usuario (
     email VARCHAR(50),
     telefono VARCHAR(20),
     direccion VARCHAR(100),
-    rol ENUM('usuario', 'admin') DEFAULT 'usuario',
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
