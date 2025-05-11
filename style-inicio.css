@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/fondo-inicio1.png'); 
+  background-size: cover; 
+  background-position: center;
+  filter: blur(10px) brightness(0.5); 
+  z-index: -1; 
+}
+
+.contenedor {
+  position: relative; 
+  z-index: 1;
+  width: 200px;
+  height: 280px;
+  min-height: 200px;
+  padding: 15px;
+  border-radius: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6); 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transform: translateY(-55px);
+  padding-top: 50px;
+  padding-bottom: 20px;
+  
+}
+
+    p {
+        padding-bottom: 14;
+    }
+
+    .logo {
+      width: 160px;
+      margin-bottom: 5px;
+    }
+
+    select, button {
+      margin: 10px 0;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+#ciudad {
+    padding: 8;
+    font-size: 14px;
+}
+
+    select {
+      background-color: rgba(255, 255, 255, 0.7);
+
+    }
+
+    button {
+      background-color: rgb(65, 159, 248);  /*  #5589ea  */
+      color: white;
+      padding: 10px 25px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: rgb(3, 82, 156);  /*  #5dade2;  */
+    }
+
+
+
+  
+
+
+
+
+
