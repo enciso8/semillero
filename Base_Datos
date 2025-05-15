@@ -2,9 +2,9 @@
 CREATE DATABASE IF NOT EXISTS comercio;
 USE comercio;
 
--- Tabla: Municipios
-CREATE TABLE municipios (
-    id_municipio INT AUTO_INCREMENT PRIMARY KEY,
+-- Tabla: Ciudad
+CREATE TABLE ciudad (
+    id_ciudad INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     departamento VARCHAR(100) NOT NULL
 );
@@ -26,19 +26,19 @@ CREATE TABLE usuario (
 );
 
 -- Tabla: Empresas
-CREATE TABLE empresas (
+CREATE TABLE empresa (
     id_empresa INT AUTO_INCREMENT PRIMARY KEY,
     nombre_empresa VARCHAR(100) NOT NULL,
-    representante_legal VARCHAR(100) NOT NULL,
     nit VARCHAR(20) NOT NULL UNIQUE,
     id_categoria INT,
     telefono VARCHAR(20),
     correo VARCHAR(50),
-    id_municipio INT,
+    id_ciudad INT,
     direccion VARCHAR(100),
+    logo VARCHAR(255),
     estado ENUM('activa', 'inactiva', 'pendiente') DEFAULT 'activa',
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_municipio) REFERENCES municipios(id_municipio),
+    FOREIGN KEY (id_ciudad) REFERENCES ciudad(id_ciudad),
     FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
 );
 
