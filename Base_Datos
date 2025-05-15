@@ -22,6 +22,7 @@ CREATE TABLE usuario (
     email VARCHAR(50),
     telefono VARCHAR(20),
     direccion VARCHAR(100),
+    contraseña VARCHAR(255) NOT NULL,
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -40,6 +41,15 @@ CREATE TABLE empresa (
     fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_ciudad) REFERENCES ciudad(id_ciudad),
     FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+);
+
+CREATE TABLE admin_empresas (
+    id_admin INT AUTO_INCREMENT PRIMARY KEY,
+    id_empresa INT NOT NULL,
+    nombre VARCHAR(100),
+    email VARCHAR(100) NOT NULL UNIQUE,
+    contraseña VARCHAR(255) NOT NULL,
+    FOREIGN KEY (id_empresa) REFERENCES empresa(id_empresa)
 );
 
 -- Tabla: Reseñas de empresa
