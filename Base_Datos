@@ -47,7 +47,7 @@ CREATE TABLE reseñas_empresa (
     id_reseña INT AUTO_INCREMENT PRIMARY KEY,
     id_empresa INT NOT NULL,
     id_usuario INT,
-    estrellas INT NOT NULL CHECK (estrellas BETWEEN 1 AND 5),
+   estrellas ENUM('1', '2', '3', '4', '5') NOT NULL,
     fecha_reseña DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_empresa) REFERENCES empresas(id_empresa),
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
